@@ -1,0 +1,15 @@
+:root {
+  --background-trans: rgba(0, 0, 0, 0.5);
+  --background-tranz: rgba(0, 0, 0, 0.7);
+  --main-color: #FFFFFF;
+  --acc-color: yellow;
+  --follow-theme: invert();
+}
+
+  :root[theme="dark"] {
+    --background-trans: rgba(0, 0, 0, 0.5);
+    --background-tranz: rgba(0, 0, 0, 0.7);
+    --main-color: #FFFFFF;
+    --follow-theme: invert();
+  }
+

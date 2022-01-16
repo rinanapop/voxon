@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>VOXON</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/colorscheme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/design.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/glitch-logo.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/colorscheme.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/date.js') }}"></script>
+  </head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-zone">
+        <h2 class="hero glitch layers" data-text="VOXON"><span>VOXON</span></h2>
+      </div>
+      <div class="connecter">
+        <div class="clip-border"></div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="javascript:changeLightMode();">
+              <img class="icons mini-icons" src="{{ url_for('static', filename='icons/sun.png') }}">
+            </a>
+          </li>
+          <li>
+            <a href="javascript:changeDarkMode();">
+              <img class="icons mini-icons" src="{{ url_for('static', filename='icons/moon.png') }}">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="wrapper-hs">
+      <div class="sider">
+        <div>left</div>
+      </div>
+      
+      <div class="center">
+        <div>
+          something
+        </div>
+      </div>
+      
+      <div class="sider">
+        <div>right</div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div>footer</div>
+    {% include 'date.html' %}
+  </footer>
+</body>
+</html>

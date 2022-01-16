@@ -1,0 +1,27 @@
+
+html {
+  background-image: url(../wallpapers/mitaku/fantasy-factory-shuten-douji/Fantasy-Factory-小丁-Shuten-Douji-4.jpg);
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--background-trans);
+  color: var(--main-color);
+  font-family: Tomorrow, sans-serif;
+  
+}
+
+
+main {
+
+}
+
+footer {
+  background-color: var(--background-tranz);
+}
+
+.icons {
+  filter: var(--follow-theme);
+}
+
+

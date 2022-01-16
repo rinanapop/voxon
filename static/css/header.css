@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+.logo-zone {
+  height: auto;
+  width: auto;
+  padding: 0px 4px 0px 4px;
+  background-color: var(--background-tranz);
+  border-bottom: solid 1px var(--acc-color);
+}
+
+.connecter {
+  content: "";
+  height: 40px;
+  width: 50px;
+  background-color: var(--background-tranz);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+
+.clip-border {
+  background-color: var(--acc-color);
+  clip-path: polygon(100% 100%, 100% 47%, 0 97%, 100% 100%);
+}
+
+.menu {
+  flex: 1;
+  height: 20px;
+  background-color: var(--background-tranz);
+  border-bottom: solid 1px var(--acc-color);
+}
