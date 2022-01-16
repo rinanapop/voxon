@@ -10,7 +10,7 @@ a {
   line-height: 1;
   display: inline-block;
   z-index: 2;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 
   /* Bright things in dark environments usually cast that light, giving off a glow */
   filter: drop-shadow(0 1px 3px);
@@ -464,7 +464,9 @@ a {
 
 .glitch span {
   animation: paths 5s step-end infinite;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Battlefield', arial;
 }
 
 .glitch::before {

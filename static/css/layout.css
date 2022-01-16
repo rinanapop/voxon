@@ -5,12 +5,17 @@
   width: 100%;
   overflow: hidden;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   flex-direction: column;
 }
+header {
+  height: auto;
+}
+
 ul {
   display: flex;
   flex-direction: row-reverse;
@@ -23,9 +28,8 @@ li {
 
 main {
   flex: 1;
-}
-.sider {
   width: auto;
+  padding: 10px;
 }
 
 .center {
@@ -37,18 +41,9 @@ footer {
 }
 
 /* global */
-.wrapper-vs {
-  display: flex;
-  flex-direction: column;
-}
-
-.wrapper-hs {
+.container {
   display: flex;
   flex-direction: row;
-}
-
-.mini-icons {
-  height: 16px;
-  width: 16px;
+  height: auto;
 }
 

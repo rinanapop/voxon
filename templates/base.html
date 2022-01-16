@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8"/>
-    <title>VOXON</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/colorscheme.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/design.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/glitch-logo.css') }}">
-    <script type="text/javascript" src="{{ url_for('static', filename='js/colorscheme.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/date.js') }}"></script>
-  </head>
+<head>
+  <meta charset="UTF-8"/>
+  <title>VOXON</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/colorscheme.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/design.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/glitch-logo.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/switch-display.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/colorscheme.js') }}"></script>
+</head>
 
 <body>
   <header>
     <div class="container">
       <div class="logo-zone">
-        <h2 class="hero glitch layers" data-text="VOXON"><span>VOXON</span></h2>
+        <h2 class="hero glitch layers" data-text="鬼浪会"><span>鬼浪会</span></h2>
       </div>
       <div class="connecter">
         <div class="clip-border"></div>
@@ -41,27 +42,73 @@
 
 
   <main>
-    <div class="wrapper-hs">
-      <div class="sider">
-        <div>left</div>
+    <div class="container">
+      <div class="sider pane">
       </div>
       
-      <div class="center">
-        <div>
-          something
+      <div class="center pane">
+      </div>
+      
+      <div class="sider pane">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen"><img class="icon-face" src="{{ url_for('static', filename='images/image.jpeg') }}" alt=""/>London</button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')"><img class="icon-face" src="{{ url_for('static', filename='images/image.jpeg') }}" alt=""/>Paris</button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')"><img class="icon-face" src="{{ url_for('static', filename='images/image.jpeg') }}" alt=""/>Tokyo</button>
         </div>
-      </div>
-      
-      <div class="sider">
-        <div>right</div>
+        <div id="London" class="tabcontent">
+          {% for m in message1 %}
+          <p>{{ m }}</p>
+          {% endfor %}
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          {% for m in message2 %}
+          <p>{{ m }}</p>
+          {% endfor %}
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
       </div>
     </div>
   </main>
 
 
   <footer>
-    <div>footer</div>
-    {% include 'date.html' %}
+    <div class="container">
+      <ul>
+        <li>
+          <button>
+            <div class="clock">
+              <p class="clock-date"></p>
+              <p class="clock-time"></p>
+            </div>
+          </button>
+        </li>
+        <li><button><img class="icons mid-icons" src="{{ url_for('static', filename='icons/mail.png') }}" alt=""/></button></li>
+      </ul>
+    </div>
   </footer>
+<script type="text/javascript" src="{{ url_for('static', filename='js/clock.js') }}"></script>
 </body>
 </html>
