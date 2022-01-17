@@ -7,10 +7,11 @@
   --follow-theme: invert();
 }
 
-  :root[theme="dark"] {
-    --background-trans: rgba(0, 0, 0, 0.5);
-    --background-tranz: rgba(0, 0, 0, 0.7);
+  :root[theme="tokyonight"] {
+    --background-trans: rgba(102, 0, 153, 0.5);
+    --background-tranz: rgba(75, 0, 130, 0.7);
     --main-color: #FFFFFF;
+    --acc-color: #FF1493;
     --follow-theme: invert();
   }
 

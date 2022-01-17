@@ -1,22 +1,28 @@
 /* Style the tab */
 .tab {
   float: left;
-  width: 25%;
+  width: 200px;
   height: auto;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  display: block;
+  display: flex;
   color: black;
+  height: auto;
   width: 100%;
   border: none;
   outline: none;
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 17px;
-  color: var(--main-color);
+  font-size: 18px;
+  color: Gray;
+  padding: 4px;
+}
+.tab button h4 {
+  text-align: center;
+  padding-top: 8px;
 }
 
 /* Change background color of buttons on hover */
@@ -28,20 +34,29 @@
 .tab button.active {
   color: var(--acc-color);
   background-color: var(--background-color);
+  border-right: 5px solid var(--acc-color);
 }
 
 /* Style the tab content */
 .tabcontent {
   float: left;
   padding: 12px;
-  width: 75%;
+  width: 350px;
   height: 100%;
-  border-left: none;
+  border-left: 1px solid var(--main-color);
 }
 
 .icon-face {
-  height: 40px;
-  width: 40px;
+  width: 50px;
   border: 2px solid var(--main-color);
-  border-radius: 50px;
+  border-radius: 4px;
+}
+
+.message-box {
+  background-color: var(--background-reverse);
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  padding: 12px;
+  margin: 12px;
+  width: auto;
 }

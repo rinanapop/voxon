@@ -28,8 +28,13 @@ li {
 
 main {
   flex: 1;
-  width: auto;
+  width: 100%;
   padding: 10px;
+}
+
+.sider {
+  width: auto;
+
 }
 
 .center {
@@ -47,3 +52,6 @@ footer {
   height: auto;
 }
 
+.target.is-hidden {
+  display: none;
+}

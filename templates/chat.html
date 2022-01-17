@@ -1,0 +1,42 @@
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+    <img class="icon-face" src="{{ url_for('static', filename='images/image.jpeg') }}" alt=""/>
+    <h4>Kanata Miyauchi</h4>
+  </button>
+
+  <button class="tablinks" onclick="openCity(event, 'Paris')">
+    <img class="icon-face" src="{{ url_for('static', filename='images/demon-icon.png') }}" alt=""/>
+    <h4>Tarou Yamada</h4>
+  </button>
+</div>
+
+<div id="London" class="tabcontent">
+  {% for m in message1 %}
+  <div class="message-box">{{ m }}</div>
+  {% endfor %}
+</div>
+
+<div id="Paris" class="tabcontent">
+  {% for m in message2 %}
+  <div class="message-box">{{ m }}</div>
+  {% endfor %}
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
