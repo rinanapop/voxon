@@ -1,6 +1,6 @@
 
 html {
-  background-image: url(../wallpapers/cyber-demon.jpg);
+  background-image: url(../wallpapers/33954.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -35,7 +35,8 @@ button {
   background-color: var(--background-tranz);
   border: solid 1px var(--main-color);
   border-radius: 4px;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
   margin: 4px;
 }
 

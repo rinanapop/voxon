@@ -10,7 +10,9 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/design.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/glitch-logo.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/skypech.css') }}">
   <script type="text/javascript" src="{{ url_for('static', filename='js/colorscheme.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 </head>
 
 <body>
@@ -46,6 +48,7 @@
       </div>
       
       <div class="center pane">
+        {% include 'skypech.html' %}
       </div>
       
       <div class="sider pane">
