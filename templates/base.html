@@ -48,12 +48,14 @@
       </div>
       
       <div class="center pane">
-        {% include 'skypech.html' %}
+        <div id="skypech_field" style="display: none;">
+          {% include 'skypech.html' %}
+        </div>
       </div>
       
       <div class="sider pane">
-        <div class="target">
-          <div target="_blank">{% include 'chat.html' %}</div>
+        <div id="chat_field" style="display: none;">
+          {% include 'chat.html' %}
         </div>
       </div>
     </div>
@@ -72,8 +74,13 @@
           </button>
         </li>
         <li>
-          <button class="mail-btn">
+          <button id="chat_btn">
             <img class="icons mid-icons" src="{{ url_for('static', filename='icons/mail.png') }}" alt=""/>
+          </button>
+        </li>
+        <li>
+          <button id="skypech_btn">
+            <img class="mid-icons" src="{{ url_for('static', filename='icons/skype-icon-white.png') }}" alt=""/>
           </button>
         </li>
       </ul>
