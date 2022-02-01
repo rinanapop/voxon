@@ -18,7 +18,7 @@ body {
 
 footer {
   background-color: var(--background-tranz);
-  border-top: solid 1px var(--acc-color);
+  border-top: solid 2px var(--acc-color);
   padding: 2px;
 }
 
@@ -38,6 +38,20 @@ button {
   height: auto;
   max-height: 100%;
   margin: 4px;
+
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+.pane::-webkit-scrollbar {
+  width: 8px;
+}
+.pane::-webkit-scrollbar-track {
+  background-color: var(--background-color-tranz);
+  border-radius: 100px;
+}
+.pane::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 100px;
 }
 
 .icons {

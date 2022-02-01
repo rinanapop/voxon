@@ -3,7 +3,7 @@
   width: auto;
   padding: 0px 4px 0px 4px;
   background-color: var(--background-tranz);
-  border-bottom: solid 1px var(--acc-color);
+  border-bottom: solid 2px var(--acc-color);
 }
 
 .connecter {
@@ -23,5 +23,5 @@
   flex: 1;
   height: 30px;
   background-color: var(--background-tranz);
-  border-bottom: solid 1px var(--acc-color);
+  border-bottom: solid 2px var(--acc-color);
 }

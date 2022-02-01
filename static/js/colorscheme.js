@@ -1,7 +1,7 @@
 function changeLightMode() {
-  document.documentElement.setAttribute('theme', 'dark');
+  document.documentElement.setAttribute('theme', 'light');
 }
 
 function changeDarkMode(){
-  document.documentElement.setAttribute('theme', 'tokyonight');
+  document.documentElement.setAttribute('theme', 'dark');
 }
