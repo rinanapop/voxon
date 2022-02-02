@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const switch_btn = document.getElementById("chat_btn");
-  const search_field = document.getElementById("chat_field");
+  const switch_btn = document.getElementById("settings_btn");
+  const search_field = document.getElementById("settings_field");
   
   switch_btn.addEventListener("click", () => {
     if(getComputedStyle(search_field).display == "none"){

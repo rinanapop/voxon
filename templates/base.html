@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/design.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/glitch-logo.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/settings.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/skypech.css') }}">
   <script type="text/javascript" src="{{ url_for('static', filename='js/colorscheme.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
@@ -25,6 +25,14 @@
         <div class="clip-border"></div>
       </div>
       <div class="menu">
+        <div>
+          <ul>
+            <li>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -33,9 +41,6 @@
   <main>
     <div class="container">
       <div class="sider pane">
-        <div id="chat_field" style="display: none;">
-          {% include 'chat.html' %}
-        </div>
       </div>
       
       <div class="center pane">
@@ -45,19 +50,8 @@
       </div>
       
       <div class="sider pane">
-        <div>
-          <ul>
-            <li>
-              <a href="javascript:changeLightMode();">
-                <img class="icons mini-icons" src="{{ url_for('static', filename='icons/sun.png') }}">
-              </a>
-            </li>
-            <li>
-              <a href="javascript:changeDarkMode();">
-                <img class="icons mini-icons" src="{{ url_for('static', filename='icons/moon.png') }}">
-              </a>
-            </li>
-          </ul>
+        <div id="settings_field" style="display: none;">
+          {% include 'settings.html' %}
         </div>
       </div>
     </div>
@@ -76,13 +70,13 @@
           </button>
         </li>
         <li>
-          <button id="chat_btn">
-            <img class="icons mid-icons" src="{{ url_for('static', filename='icons/mail.png') }}" alt=""/>
+          <button id="settings_btn">
+            <img class="icons mid-icons" src="{{ url_for('static', filename='icons/settings.png') }}" alt=""/>
           </button>
         </li>
         <li>
           <button id="skypech_btn">
-            <img class="mid-icons" src="{{ url_for('static', filename='icons/skype-icon-white.png') }}" alt=""/>
+            <img class="icons mid-icons" src="{{ url_for('static', filename='icons/skype.png') }}" alt=""/>
           </button>
         </li>
       </ul>
@@ -90,5 +84,10 @@
   </footer>
 <script type="text/javascript" src="{{ url_for('static', filename='js/clock.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/switch-display.js') }}"></script>
+<script type="text/javascript">
+window.onload = function(){
+document.documentElement.setAttribute('theme', '{{ colorscheme }}');
+}
+</script>
 </body>
 </html>

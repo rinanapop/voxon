@@ -1,7 +1,4 @@
-function changeLightMode() {
-  document.documentElement.setAttribute('theme', 'light');
+window.onload = function(order_theme){
+  document.documentElement.setAttribute('theme', order_theme);
 }
 
-function changeDarkMode(){
-  document.documentElement.setAttribute('theme', 'dark');
-}

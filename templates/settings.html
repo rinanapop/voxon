@@ -1,25 +1,19 @@
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
-    <img class="icon-face" src="{{ url_for('static', filename='images/image.jpeg') }}" alt=""/>
-    <h4>Kanata Miyauchi</h4>
+  <button class="tablinks" onclick="openCity(event, 'wallpapers')" id="defaultOpen">
+    <h4>wallpapers</h4>
   </button>
 
-  <button class="tablinks" onclick="openCity(event, 'Paris')">
-    <img class="icon-face" src="{{ url_for('static', filename='images/demon-icon.png') }}" alt=""/>
-    <h4>Tarou Yamada</h4>
+  <button class="tablinks" onclick="openCity(event, 'colorscheme')">
+    <h4>Color Schemes</h4>
   </button>
 </div>
 
-<div id="London" class="tabcontent">
-  {% for m in message1 %}
-  <div class="message-box">{{ m }}</div>
-  {% endfor %}
+<div id="wallpapers" class="tabcontent">
+  <div class="message-box">Something 1</div>
 </div>
 
-<div id="Paris" class="tabcontent">
-  {% for m in message2 %}
-  <div class="message-box">{{ m }}</div>
-  {% endfor %}
+<div id="colorscheme" class="tabcontent">
+  <div class="message-box">Something 2</div>
 </div>
 
 <script>
