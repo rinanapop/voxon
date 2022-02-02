@@ -5,6 +5,7 @@ import os
 import yaml
 
 import profile
+import scrapie
 
 URL = "https://skypech.com"
 UPLOAD_DIR = './static/wallpapers'
@@ -18,12 +19,15 @@ def index():
         if ('file' in request.files):
 
             file = request.files['file']    
+            if file.filename == '':
+                return redirect(url_for('index'))
+            
             file.save(os.path.join(UPLOAD_DIR, file.filename))
 
             with open(PROFILE, 'r+') as yf:
                 profile = yaml.safe_load(yf)
                 profile[USER_NAME]['wallpaper'] = file.filename
-            with open(PROFILE, 'r+') as yf:
+            with open(PROFILE, 'w') as yf:
                 yf.write(str(profile))
 
             return redirect(url_for('index'))
@@ -36,11 +40,7 @@ def index():
 
         return render_template(
             'base.html',
-
-            profile="",
-            #posts=posts,
-            #wallpaper=wallpaper,
+            posts=scrapie.get_girls_posts_info(URL),
             wallpaper = profile[USER_NAME]['wallpaper'],
-            #colorscheme=colorscheme
             colorscheme = profile[USER_NAME]['colorscheme']
         )

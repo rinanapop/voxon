@@ -38,9 +38,12 @@ button {
   max-height: 100%;
   margin: 4px;
 
+  /*
   overflow-y: scroll;
   scrollbar-width: thin;
+  */
 }
+/*
 .pane::-webkit-scrollbar {
   width: 8px;
 }
@@ -51,6 +54,10 @@ button {
 .pane::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 100px;
+}
+*/
+.sider {
+  max-width: 25%;
 }
 
 .icons {
