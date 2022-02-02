@@ -34,13 +34,13 @@
 .tab button.active {
   color: var(--acc-color);
   background-color: var(--background-color);
-  border-right: 5px solid var(--acc-color);
+  border-right: 3px solid var(--acc-color);
 }
 
 /* Style the tab content */
 .tabcontent {
   float: left;
-  padding: 12px;
+  padding: 4px;
   width: auto;
   border-left: 1px solid var(--main-color);
 }
@@ -49,8 +49,8 @@
   background-color: var(--background-reverse);
   border: 1px solid var(--main-color);
   border-radius: 4px;
-  padding: 12px;
-  margin: 12px;
+  margin-left: 8px;
+  margin-top: 8px;
   width: auto;
   height: auto;
 }
