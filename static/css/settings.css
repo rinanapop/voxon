@@ -2,6 +2,7 @@
 .tab {
   float: left;
   width: auto;
+  min-width: 120px;
   height: auto;
 }
 
@@ -16,23 +17,23 @@
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 18px;
   color: Gray;
   padding: 4px;
 }
 .tab button h4 {
   text-align: center;
+  font-size: 18px;
   margin: 4px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: var(--background-reverse);
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  color: var(--acc-color);
+  color: var(--main-color);
   background-color: var(--background-color);
   border-right: 3px solid var(--acc-color);
 }
@@ -41,16 +42,12 @@
 .tabcontent {
   float: left;
   padding: 4px;
-  width: auto;
-  border-left: 1px solid var(--main-color);
+  border-left: 1px solid gray;
 }
-
-.message-box {
-  background-color: var(--background-reverse);
-  border: 1px solid var(--main-color);
-  border-radius: 4px;
-  margin-left: 8px;
-  margin-top: 8px;
-  width: auto;
+.tabcontent h4 {
   height: auto;
+  font-size: 18px;
+  padding: 4px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid gray;
 }

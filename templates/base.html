@@ -11,8 +11,6 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/glitch-logo.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/settings.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/skypech.css') }}">
-  <script type="text/javascript" src="{{ url_for('static', filename='js/colorscheme.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 </head>
 
 <body>
@@ -82,8 +80,11 @@
       </ul>
     </div>
   </footer>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/clock.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/switch-display.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/colorscheme.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/get_more_posts.js') }}"></script>
 <script type="text/javascript">
 window.onload = function(){
 document.documentElement.setAttribute('theme', '{{ colorscheme }}');

@@ -1,10 +1,9 @@
 <div class="posts-wrapper">
   {% for post in posts %}
-    <div class="post">
+    <div class="post message-box">
       <div class="post-header">
         <div class="post-icon">
           <button class="post-btn" id="{{ post.skype_id }}">
-            <span><img src="{{ post.icon }}"></span>
             <img src="{{ post.icon }}">
           </button>
         </div>
@@ -21,27 +20,7 @@
       </div>
     </div>
   {% endfor %}
+  <button class="load-btn submit-btn" >LOAD MORE</button>
 </div>
 <div id="master">
 </div>
-
-<script>
-$('.post-btn').click(function(){
-  $.ajax({
-  　url: 'get_more_posts',
-  　type: 'post',
-  　cache: false,
-  　dataType:'html',
-    data:{ id: $(this).attr('id')}
-  　})
-    
-  　.done(function(response) {
-      $('#master').html(response);
-  　})
-
-  　.fail(function(data) {
-      window.alert("failed");
-  　})
-});
-
-</script> 

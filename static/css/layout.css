@@ -26,6 +26,11 @@ li {
   margin-right: 4px;
 }
 
+form > div {
+  height: auto;
+  margin: 8px;
+}
+
 main {
   flex: 1;
   width: 100%;
