@@ -3,7 +3,7 @@
     <div class="post">
       <div class="post-header">
         <div class="post-icon">
-          <button class="post-btn" id="{{ post.skype_id }}">
+          <button>
             <span><img src="{{ post.icon }}"></span>
             <img src="{{ post.icon }}">
           </button>
@@ -22,26 +22,3 @@
     </div>
   {% endfor %}
 </div>
-<div id="master">
-</div>
-
-<script>
-$('.post-btn').click(function(){
-  $.ajax({
-  　url: 'get_more_posts',
-  　type: 'post',
-  　cache: false,
-  　dataType:'html',
-    data:{ id: $(this).attr('id')}
-  　})
-    
-  　.done(function(response) {
-      $('#master').html(response);
-  　})
-
-  　.fail(function(data) {
-      window.alert("failed");
-  　})
-});
-
-</script> 
