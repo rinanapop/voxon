@@ -1,26 +1,34 @@
 <div class="posts-wrapper">
-  {% for post in posts %}
-    <div class="post message-box">
-      <div class="post-header">
-        <div class="post-icon">
-          <button class="post-btn" id="{{ post.skype_id }}">
+  <div class="menu">
+    <button class="box-30 reload-btn" id="">
+      <img class="icons mini-icons" src="{{ url_for('static', filename='icons/reload.png') }}" alt=""/>
+    </button>
+    <button class="box-30 clear-btn" id="">
+      <img class="icons mini-icons" src="{{ url_for('static', filename='icons/clear.png') }}" alt=""/>
+    </button>
+  </div>
+  <div class="field">
+    {% for post in posts %}
+      <div class="post message-box">
+        <div class="post-header">
+          <button class="box-50 post-btn" id="{{ post.skype_id }}">
             <img src="{{ post.icon }}">
           </button>
         </div>
+        <div class="post-body">
+          <h5 class="post-name">{{ post.name }}<span>{{ post.skype_id }}</span></h5>
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <div class="tag">{{ tag }}</div>
+            {% endfor %}
+          </div>        
+          <div class="post-title">{{ post.title }}<span class="post-date">{{ post.date }}</span></div>        
+          <div class="post-message">{{ post.message }}</div>        
+        </div>
       </div>
-      <div class="post-body">
-        <h5 class="post-name">{{ post.name }}<span>{{ post.skype_id }}</span></h5>
-        <div class="post-tags">
-          {% for tag in post.tags %}
-            <div class="tag">{{ tag }}</div>
-          {% endfor %}
-        </div>        
-        <div class="post-title">{{ post.title }}<span class="post-date">{{ post.date }}</span></div>        
-        <div class="post-message">{{ post.message }}</div>        
-      </div>
-    </div>
-  {% endfor %}
-  <button class="load-btn submit-btn" >LOAD MORE</button>
+    {% endfor %}
+  </div>
+  <button class="load-btn submit-btn">LOAD MORE</button>
 </div>
 <div id="master">
 </div>

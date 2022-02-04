@@ -1,11 +1,9 @@
 {% for post in posts %}
   <div class="post message-box">
     <div class="post-header">
-      <div class="post-icon">
-        <button class="post-btn" id="{{ post.skype_id }}">
-          <img src="{{ post.icon }}">
-        </button>
-      </div>
+      <button class="box-50 post-btn" id="{{ post.skype_id }}">
+        <img src="{{ post.icon }}">
+      </button>
     </div>
     <div class="post-body">
       <h5 class="post-name">{{ post.name }}<span>{{ post.skype_id }}</span></h5>
@@ -19,5 +17,3 @@
     </div>
   </div>
 {% endfor %}
-
-<script type="text/javascript" src="{{ url_for('static', filename='js/get_more_posts.js') }}"></script>

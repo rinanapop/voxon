@@ -17,7 +17,6 @@ body {
 footer {
   background-color: var(--background-tranz);
   border-top: solid 2px var(--acc-color);
-  padding: 2px;
 }
 
 button {
@@ -49,12 +48,6 @@ input[type='radio'] {
 .pane {
   background-color: var(--background-tranz);
   border-radius: 6px;
-  height: auto;
-  max-height: 100%;
-  margin: 4px;
-}
-.sider {
-  max-width: 25%;
 }
 
 .message-box {
@@ -67,12 +60,35 @@ input[type='radio'] {
   padding: 12px;
 }
 
+.box-50 {
+  height: 50px;
+  width: 50px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  transition: 0.6s;
+}
+.box-50:hover {
+  background-color: var(--background-tranz);
+  border: 2px solid var(--acc-color);
+}
+.box-30 {
+  height: 30px;
+  width: 30px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  transition: 0.6s;
+}
+.box-30:hover {
+  background-color: var(--background-tranz);
+  border: 2px solid var(--acc-color);
+}
+
 .icons {
   filter: var(--follow-theme);
 }
 .mid-icons {
   height: 30px;
-  width: auto;
+  width: 30px;
 }
 .mini-icons {
   height: 20px;
@@ -80,8 +96,8 @@ input[type='radio'] {
 }
 
 .clock {
-  height: 100%;
-  width: 110px;
+  height: auto;
+  width: auto;
   text-align: center;
   color: var(--main-color);
 }

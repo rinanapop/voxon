@@ -1,6 +1,7 @@
 .skypech {
   display: flex;
 }
+
 .posts-wrapper {
   height: auto;
   border-right: 1px solid gray;
@@ -9,7 +10,7 @@
   overflow-y: scroll;
 }
 .posts-wrapper::-webkit-scrollbar {
-  width: 4px;
+  width: 100px;
 }
 .posts-wrapper::-webkit-scrollbar-track {
   background-color: var(--background-color-tranz);
@@ -29,13 +30,6 @@
 .post-header {
   width: auto;
   min-width: 60px;
-}
-
-.post-icon {
-  height: 50px;
-  width: 50px;
-  border: 2px solid gray;
-  border-radius: 4px;
 }
 
 .post-name {

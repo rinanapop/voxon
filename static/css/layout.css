@@ -37,13 +37,28 @@ main {
   padding: 10px;
 }
 
-.sider {
+.pane {
+  height: auto;
+  max-height: 100%;
   width: auto;
+  margin: 4px;
+}
 
+.sider {
 }
 
 .center {
   flex: 1;
+}
+
+.field {
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  height: auto;
+  padding: 8px;
 }
 
 footer {

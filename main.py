@@ -38,24 +38,23 @@ def index():
             colorscheme = profile[config.USER_NAME]['colorscheme']
         )
 
-@app.route('/get_more_posts', methods=['GET', 'POST'])
-def get_more_posts():
+@app.route('/skypech', methods=['GET', 'POST'])
+def skypech():
 
     if request.method == 'POST':
         posts = scrapie.get_girls_posts_info(config.URL_ID + request.form.get('id'))
+        print("POST"*10)
+
+        return render_template(
+            'more_posts.html',
+            posts=posts
+        )
 
     else:
-        posts = scrapie.get_girls_posts_info(config.URL_PAGE + "2")
+        n_posts = scrapie.get_girls_posts_info(config.URL_PAGE + "2")
+        print(len(n_posts))
 
-    return render_template(
-        'more_posts.html',
-        posts=posts
-    )
-
-
-
-
-
-
-
-
+        return render_template(
+            'more_posts.html',
+            posts=n_posts
+        )

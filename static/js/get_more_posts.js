@@ -1,6 +1,6 @@
 $('.post-btn').click(function(){
   $.ajax({
-  　url: 'get_more_posts',
+  　url: 'skypech',
   　type: 'post',
   　cache: false,
   　dataType:'html',
@@ -18,17 +18,38 @@ $('.post-btn').click(function(){
 
 $('.load-btn').click(function(){
   $.ajax({
-  　url: 'get_more_posts',
+  　url: 'skypech',
   　type: 'get',
   　cache: false,
   　dataType:'html'
   　})
     
   　.done(function(response) {
-      $('.load-btn').before(response);
+      $('.field').append(response);
   　})
 
   　.fail(function(data) {
-      window.alert("failed");
+      window.alert("load failed");
   　})
+});
+
+$('.reload-btn').click(function(){
+  $.ajax({
+  　url: 'skypech',
+  　type: 'get',
+  　cache: false,
+  　dataType:'html'
+  　})
+    
+  　.done(function(response) {
+      $('.field').html(response);
+  　})
+
+  　.fail(function(data) {
+      window.alert("reload failed");
+  　})
+});
+
+$('.clear-btn').click(function(){
+  $('.field').empty();
 });

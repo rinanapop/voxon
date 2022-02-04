@@ -1,3 +1,6 @@
+.settings {
+  width: 100%;
+}
 /* Style the tab */
 .tab {
   float: left;
@@ -29,6 +32,7 @@
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: var(--background-reverse);
+  color: var(--main-color);
 }
 
 /* Create an active/current "tab button" class */
@@ -40,8 +44,8 @@
 
 /* Style the tab content */
 .tabcontent {
-  float: left;
-  padding: 4px;
+  width: 100%;
+  min-width: 420px;
   border-left: 1px solid gray;
 }
 .tabcontent h4 {
